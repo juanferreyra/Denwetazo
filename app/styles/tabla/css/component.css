@@ -23,9 +23,8 @@
 table {
     border-collapse: collapse;
     margin-bottom: 3em;
-    width: 1000;
+    width: 100%;
     background: #fff;
-
 }
 td, th {
     padding: 0.75em 1.5em;
@@ -102,3 +101,7 @@ td.user-name {
 	max-height: 50vh;
 }
 
+.estado {
+    width: 30px;
+    height: 30px;
+}
