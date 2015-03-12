@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="styles/tabla/css/demo.css">
 <link rel="stylesheet" href="styles/tabla/css/normalize.css">
 <p>Filtro de busqueda: <input ng-model="internoBuscado"></p>
+<p>Tipo de interno: <select ng-model="tipoBuscado.tipo">
+						<option value="PHONE">Telefono</option>
+						<option value="FAX">Fax</option>
+						<option value="GROUP">Grupos</option>
+					</select>
+
 <div ng-controller="PruebaCtrl">
     <table>
         <tr>
@@ -11,7 +17,8 @@
             <th>Tipo</th>
             <th>Estado</th>
         </tr>
-        <tr ng-repeat="interno in internos | filter:internoBuscado">
+        
+        <tr ng-repeat="interno in internos | filter:internoBuscado | filter:tipoBuscado">
             <td>{{interno.nombre}}</td>
             <td>{{interno.apellido}}</td>
             <td>{{interno.numero}}</td>
