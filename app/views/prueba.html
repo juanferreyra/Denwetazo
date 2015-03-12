@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="styles/tabla/css/component.css">
+<link rel="stylesheet" href="styles/tabla/css/demo.css">
+<link rel="stylesheet" href="styles/tabla/css/normalize.css">
+<p>Filtro de busqueda: <input ng-model="internoBuscado"></p>
+<div ng-controller="PruebaCtrl">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Numero</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+        </tr>
+        <tr ng-repeat="interno in internos | filter:internoBuscado">
+            <td>{{interno.nombre}}</td>
+            <td>{{interno.apellido}}</td>
+            <td>{{interno.numero}}</td>
+            <td>{{interno.tipo}}</td>
+            <td>{{interno.estado}}</td>
+        </tr>
+    </table>
+</div>
+
+<script src="styles/tabla/js/jquery.stickyheader.js"></script>
