@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="styles/tabla/css/component.css">
-<link rel="stylesheet" href="styles/tabla/css/demo.css">
-<link rel="stylesheet" href="styles/tabla/css/normalize.css">
 <p>Filtro de busqueda: <input ng-model="internoBuscado"></p>
 <p>Tipo de interno: <select ng-model="tipoBuscado.tipo">
 						<option value="PHONE">Telefono</option>
@@ -23,10 +20,8 @@
             <td>{{interno.apellido}}</td>
             <td>{{interno.numero}}</td>
             <td>{{interno.tipo}}</td>
-            <td><img ng-src="{{interno.estado}}" class="estado"></td>
+            <td><img src="images/phoneoff.png" ng-show="!interno.estado" class="estado">
+                <img src="images/phoneon.png" ng-show="interno.estado" class="estado"></td>
         </tr>
     </table>
 </div>
-
-
-<script src="styles/tabla/js/jquery.stickyheader.js"></script>
