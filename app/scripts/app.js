@@ -24,6 +24,6 @@ angular
         controller: 'PruebaCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/tel-fax'
       });
   });
